@@ -15,8 +15,19 @@
 
 
 # > **Unzipping files**
+```python
+import zipfile
 
-<a href='https://colab.research.google.com/drive/1nguOEexRE0bJ-hWMIpIdRHZ9fYPK73Bt#scrollTo=-TR19Jqxwiq4&line=3&uniqifier=1'>Unzipping Code</a>
+# returns 'Select files'
+zip_files = ['test1', 'train']
+
+for zip_file in zip_files:
+    with zipfile.ZipFile("/content/drive/MyDrive/dogs-vs-cats.zip".format(zip_file),"r") as z:
+        z.extractall(".")
+        print("{} unzipped".format(zip_file))
+
+```
+
 
 
  > **Build Model**
